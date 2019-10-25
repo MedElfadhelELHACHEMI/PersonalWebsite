@@ -1,17 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 import Head from 'components/head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 
+import BackgroundImage from 'gatsby-background-image';
+const StyledBackgroundImage = styled(BackgroundImage)`
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: contain;
+`;
 const Layout = ({ data, children }) => (
-  <div>
+  <StyledBackgroundImage
+    Tag="div"
+    fluid={data.homeJson.backgroundImage.childImageSharp.fluid}
+    backgroundColor={'#040e18'}
+  >
     <GlobalStyle />
     <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
     {children}
-  </div>
+  </StyledBackgroundImage>
 );
 
 Layout.propTypes = {
@@ -26,6 +37,15 @@ const LayoutWithQuery = props => (
         site {
           siteMetadata {
             siteTitle
+          }
+        }
+        homeJson {
+          backgroundImage {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
         }
       }

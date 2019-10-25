@@ -1,16 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
+import posed from 'react-pose';
 import { Title, Copy } from './item.css';
 
+const AnimatedFigure = posed.figure({
+  enter: { opacity: 1, delay: 5000 },
+  exit: { opacity: 0, delay: 350 },
+});
+
 const Item = ({ title, copy, image }) => (
-  <figure>
+  <AnimatedFigure style={{ opacity: 0 }}>
     <Img fluid={image ? image.childImageSharp.fluid : {}} alt={title} />
     <figcaption>
       <Title>{title}</Title>
       <Copy>{copy}</Copy>
     </figcaption>
-  </figure>
+  </AnimatedFigure>
 );
 
 Item.propTypes = {
