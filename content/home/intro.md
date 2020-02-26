@@ -1,3 +1,1 @@
-#Hello
-
-An opinionated starter for using Gatsby v2 with React Context, tag-agnostic styled-components, page transitions and scroll events with IntersectionObserver.
+Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.

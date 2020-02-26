@@ -1,4 +1,5 @@
 import styled from 'styled-components';
-export const LayoutContainer = styled.div`
-  background: rebeccapurple;
+export const ChildrenContainer = styled.div`
+  //height: auto;
+  //min-height: 100%;
 `;

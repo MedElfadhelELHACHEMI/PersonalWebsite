@@ -1,11 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import posed from 'react-pose';
 import { Container } from './header.css';
-import Title from 'components/title';
+import Logo from 'components/Logo';
+// import Title from 'components/title';
 import Nav from 'components/header/nav';
 
+const StyledLink = styled(Link)`
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+`;
+// const StyledTitle = styled(props => <Title {...props} />)`
+//   margin-left: 14px;
+// `;
 // Example of a component-specific page transition
 const AnimatedContainer = posed.div({
   enter: {
@@ -22,12 +34,12 @@ const AnimatedContainer = posed.div({
   },
 });
 
-const Header = ({ title }) => (
+const Header = () => (
   <AnimatedContainer>
     <Container>
-      <Link to="/">
-        <Title as="h1">{title}</Title>
-      </Link>
+      <StyledLink to="/">
+        <Logo width="36px" height="42px" />
+      </StyledLink>
 
       <Nav />
     </Container>
