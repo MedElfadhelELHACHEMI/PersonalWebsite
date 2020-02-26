@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import posed from 'react-pose';
 import { Container } from './header.css';
-import Logo from 'components/Logo';
-// import Title from 'components/title';
+import Logo from 'components/Logo/logo';
 import Nav from 'components/header/nav';
 
 const StyledLink = styled(Link)`
