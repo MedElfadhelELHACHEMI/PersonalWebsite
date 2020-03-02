@@ -147,9 +147,7 @@ const Item = ({ title, copy, image }) => {
               <Rest>
                 <span>INFO</span>
               </Rest>
-              <Button onClick={() => console.log('click')}>
-                Open Github Repo
-              </Button>
+              <Button>Open Github Repo</Button>
             </Fourth>
           </SecondContainer>
         </Container>
