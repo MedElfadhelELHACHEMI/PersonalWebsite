@@ -149,6 +149,14 @@ const Head = ({
       sizes="16x16"
       type="image/png"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sulphur+Point:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300|Montserrat:700,400&display=swap"
+      rel="stylesheet"
+    />
 
     <script type="application/ld+json">
       {JSON.stringify(

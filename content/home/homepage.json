@@ -2,15 +2,16 @@
   "title": "Home",
   "content": "intro.md",
   "backgroundImage": "../images/background2.png",
+  "backgroundImageDark": "../images/background-Dark.png",
   "gallery": [{
     "title": "React Context",
     "copy": "For global styles.",
-    "image": "../images/gallery/react-context.jpg"
+    "image": "../images/gallery/AZERTY.jpg"
   },
   {
     "title": "Page Transitions",
     "copy": "Component-based for easy usage.",
-    "image": "../images/gallery/page-transitions.jpg"
+    "image": "../images/gallery/AZERTY2.jpg"
   },
   {
     "title": "Intersection Observer",

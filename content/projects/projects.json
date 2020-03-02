@@ -4,12 +4,12 @@
   "projectList": [{
     "title": "React OpenTok Whiteboard",
     "copy": "React shared whiteboard that works with Opentok",
-    "image": "../images/gallery/react-context.jpg"
+    "image": "../images/gallery/AZERTY.jpg"
   },
     {
       "title": "Cam Pot",
       "copy": "A Three JS game",
-      "image": "../images/gallery/page-transitions.jpg"
+      "image": "../images/gallery/AZERTY2.jpg"
     },
     {
       "title": "Audio Visualizer",

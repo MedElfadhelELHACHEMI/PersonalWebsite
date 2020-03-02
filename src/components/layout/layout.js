@@ -6,6 +6,7 @@ import Head from 'components/head';
 import Header from 'components/header';
 import GlobalStyle from 'global.css.js';
 import BackgroundImage from 'gatsby-background-image';
+import { Consumer } from '../../store/createContext';
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   background-position: top left;
@@ -18,19 +19,28 @@ const StyledBackgroundImage = styled(BackgroundImage)`
     opacity: 0.8 !important;
   }
 `;
-const Layout = ({ data, children }) => (
-  <StyledBackgroundImage
-    Tag="div"
-    fluid={data.homeJson.backgroundImage.childImageSharp.fluid}
-    backgroundColor={'#fefefa'}
-  >
-    <GlobalStyle />
-    <Head />
-    <Header title="" />
-    {/*<ChildrenContainer></ChildrenContainer>*/}
-    {children}
-  </StyledBackgroundImage>
-);
+const Layout = ({ data, children }) => {
+  return (
+    <Consumer>
+      {({ darkMode }) => (
+        <StyledBackgroundImage
+          Tag="div"
+          fluid={
+            darkMode
+              ? data.homeJson.backgroundImageDark.childImageSharp.fluid
+              : data.homeJson.backgroundImage.childImageSharp.fluid
+          }
+          backgroundColor={darkMode ? '#000' : '#fefefa'}
+        >
+          <GlobalStyle />
+          <Head />
+          <Header title="" />
+          {children}
+        </StyledBackgroundImage>
+      )}
+    </Consumer>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
@@ -48,6 +58,13 @@ const LayoutWithQuery = props => (
         }
         homeJson {
           backgroundImage {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+          backgroundImageDark {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp

@@ -13,7 +13,7 @@ const Logo = props => (
     >
       <g
         transform="translate(3.000000, 3.000000)"
-        stroke="#333"
+        stroke={props.color || '#333'}
         strokeWidth="10"
       >
         <path
@@ -27,6 +27,7 @@ const Logo = props => (
 Logo.propTypes = {
   width: PropTypes.string,
   height: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default Logo;

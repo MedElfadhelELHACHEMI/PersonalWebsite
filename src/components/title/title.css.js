@@ -3,13 +3,14 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export const Text = styled.span`
   display: block;
+  font-family: Montserrat, sans-serif;
   color: #000;
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
         return '400';
       default:
-        return '500';
+        return '700';
     }
   }};
   font-size: ${({ size }) => () => {

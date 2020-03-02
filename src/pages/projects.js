@@ -2,20 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/layout';
-import Box from 'components/box';
 import Head from 'components/head';
 import Gallery from 'components/gallery/gallery';
 
 const Projects = ({ data }) => (
   <Layout>
     <Head pageTitle={data.projectsJson.title} />
-    <Box>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: data.projectsJson.content.childMarkdownRemark.html,
-        }}
-      />
-    </Box>
     <Gallery items={data.projectsJson.projectList} />
   </Layout>
 );

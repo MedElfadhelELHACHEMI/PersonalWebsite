@@ -55,7 +55,7 @@ const Index = ({ data }) => (
         />
       </Avatar>
       <Text>
-        <Title as="h2" size="main">
+        <Title as="p" size="main">
           {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
         </Title>
       </Text>

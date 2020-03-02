@@ -5,6 +5,14 @@ import { Dialog } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
 
 import '@reach/dialog/styles.css';
+import styled from 'styled-components';
+
+const StyledDialog = styled(Dialog)`
+  background: #fefefa !important;
+  width: calc(100% / 1.61803398875) !important;
+  height: calc(100% / 1.61803398875) !important;
+  padding: 0 !important;
+`;
 
 // This component is here only to to showcase the
 // React Context integration. No need to keep this if
@@ -45,13 +53,13 @@ export default class Modal extends PureComponent {
 
     return (
       <>
-        <Dialog isOpen={open}>
+        <StyledDialog isOpen={open}>
           <Close onClick={hideModal}>
             <VisuallyHidden>Close</VisuallyHidden>
             <span aria-hidden>×</span>
           </Close>
           {children}
-        </Dialog>
+        </StyledDialog>
       </>
     );
   }
