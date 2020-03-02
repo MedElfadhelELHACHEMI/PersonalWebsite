@@ -11,12 +11,12 @@ const IconContainer = styled.div`
   cursor: pointer;
   margin-left: 5rem;
 `;
-const LocalStorage = typeof window !== 'undefined' && window.localStorage;
+// const LocalStorage = typeof window !== 'undefined' && window.localStorage;
 
 const DarkToggle = props => {
   const toggleDarkMode = () => {
-    const isTrue = LocalStorage.getItem('darkMode') === 'true';
-    LocalStorage.setItem('darkMode', !isTrue);
+    // const isTrue = LocalStorage.getItem('darkMode') === 'true';
+    // LocalStorage.setItem('darkMode', !isTrue);
   };
   return (
     <IconContainer onClick={toggleDarkMode}>
