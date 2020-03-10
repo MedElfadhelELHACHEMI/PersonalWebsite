@@ -10,6 +10,9 @@ export const Container = styled.nav`
     display: flex;
     list-style: none;
     padding: 0;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     li {
       text-transform: uppercase;
       font-size: 1.3rem;

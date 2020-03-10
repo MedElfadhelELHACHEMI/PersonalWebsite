@@ -4,7 +4,7 @@ import MEDIA from 'helpers/mediaTemplates';
 export const Text = styled.span`
   display: block;
   font-family: Montserrat, sans-serif;
-  color: #000;
+  color: #333;
   font-weight: ${({ size }) => () => {
     switch (size) {
       case 'large':
@@ -18,13 +18,15 @@ export const Text = styled.span`
       case 'large':
         return '3.2rem';
       case 'main':
-        return '4rem';
+        return '3.5rem';
       default:
         return '2rem';
     }
   }};
-  line-height: 1.2;
-
+  line-height: 1.5;
+  ${MEDIA.DESKTOP`
+    font-size : 2.5rem;
+  `};
   ${MEDIA.TABLET`
     font-size: ${({ size }) => () => {
       switch (size) {

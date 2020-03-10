@@ -18,6 +18,7 @@ const IndexContainer = styled.section`
   height: calc(100vh - 128px);
   ${MEDIA.TABLET`
     display: block;
+    padding: 0 3.5rem;
   `};
   ${MEDIA.PHONE`
     flex-flow: column;
@@ -25,8 +26,8 @@ const IndexContainer = styled.section`
   `};
 `;
 const Avatar = styled.div`
-  flex-basis: 50%;
-  margin-right: 4rem;
+  flex-basis: 47.5%;
+  //margin-right: 4rem;
   box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.4);
   ${MEDIA.TABLET`
     margin: 0;
@@ -36,9 +37,18 @@ const Avatar = styled.div`
     margin: 0;
     margin-bottom : 4rem;
   `};
+  ${MEDIA.DESKTOP`
+    flex-basis: 60%
+  `};
 `;
 const Text = styled.div`
-  flex-basis: 50%;
+  flex-basis: 47.5%;
+  ${MEDIA.DESKTOP`
+    flex-basis: 36%;
+    p{
+    margin-bottom: 0px;
+    }
+  `};
 `;
 
 const Index = ({ data }) => (

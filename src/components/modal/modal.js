@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Close } from './modal.css';
 import { Dialog } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
+import MEDIA from 'helpers/mediaTemplates';
 
 import '@reach/dialog/styles.css';
 import styled from 'styled-components';
@@ -12,6 +13,13 @@ const StyledDialog = styled(Dialog)`
   width: calc(100% / 1.61803398875) !important;
   height: calc(100% / 1.61803398875) !important;
   padding: 0 !important;
+  ${MEDIA.TABLET`
+    width: 71% !important;
+    height: 71% !important;
+  `};
+  ${MEDIA.PHONE`
+   width: 93% !important;
+  `};
 `;
 
 // This component is here only to to showcase the

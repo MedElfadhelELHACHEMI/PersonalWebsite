@@ -1,1 +1,3 @@
-Think classic lorem ipsum is passé? Give your next project a bit more edge with these funny and unique text generators.
+I'm a front end engineer,i mainly work with ReactJS.
+I Design and implement everything from the architecture, animations and UI kit.
+I'm currently working at Yes'n'You in Paris where i'm the front end engineer .

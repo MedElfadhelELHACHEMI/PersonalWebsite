@@ -15,10 +15,10 @@ const Nav = () => (
       <li>
         <a href="https://github.com/MedElfadhelELHACHEMI">GitHub</a>
       </li>
-      <li>
-        {' '}
-        <DarkToggle width="20px" height="20px" />
-      </li>
+      {/*<li>*/}
+      {/*  {' '}*/}
+      {/*  <DarkToggle width="20px" height="20px" />*/}
+      {/*</li>*/}
     </ul>
   </Container>
 );
