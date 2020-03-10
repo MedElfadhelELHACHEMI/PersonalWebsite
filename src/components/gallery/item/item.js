@@ -93,7 +93,7 @@ const Fourth = styled.div`
   width: calc(100% - (100% / 1.61803398875)) !important;
   `};
 `;
-const Button = styled.button`
+const Button = styled.a`
   width: calc(100% / 1.61803398875) !important;
   height: 100%;
   background: #ffffff;
@@ -105,6 +105,7 @@ const Button = styled.button`
   outline: none;
   border: none;
   border-left: 1px solid #eee;
+  text-decoration: none;
 `;
 const Rest = styled.div`
   width: calc(100% - (100% / 1.61803398875)) !important;
@@ -116,7 +117,7 @@ const Rest = styled.div`
   align-items: center;
   box-sizing: border-box;
 `;
-const Item = ({ title, copy, image }) => {
+const Item = ({ title, copy, image, githubLink }) => {
   const [openModal, setOpenModal] = useState(false);
   return (
     <AnimatedFigure
@@ -147,7 +148,13 @@ const Item = ({ title, copy, image }) => {
               <Rest>
                 <span>INFO</span>
               </Rest>
-              <Button>Open Github Repo</Button>
+              <Button
+                onClick={() => console.log(githubLink)}
+                href={githubLink}
+                target="_blank"
+              >
+                Open Github Repo
+              </Button>
             </Fourth>
           </SecondContainer>
         </Container>
@@ -160,6 +167,7 @@ Item.propTypes = {
   title: PropTypes.string,
   copy: PropTypes.string,
   image: PropTypes.object.isRequired,
+  githubLink: PropTypes.string,
 };
 
 export default Item;

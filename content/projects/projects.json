@@ -4,32 +4,38 @@
   "projectList": [{
     "title": "React OpenTok Whiteboard",
     "copy": "React shared whiteboard that works with Opentok",
-    "image": "../images/gallery/AZERTY.jpg"
+    "image": "../images/gallery/ROW.png",
+    "githubLink": "https://github.com/MedElfadhelELHACHEMI/opentok-react-whiteboard"
   },
     {
       "title": "Cam Pot",
       "copy": "A Three JS game",
-      "image": "../images/gallery/AZERTY2.jpg"
+      "image": "../images/gallery/AZERTY2.jpg",
+      "githubLink": "#"
     },
     {
       "title": "Audio Visualizer",
       "copy": "Visualize Audio Input",
-      "image": "../images/gallery/intersection-observer.jpg"
+      "image": "../images/gallery/intersection-observer.jpg",
+      "githubLink": "#"
     },
     {
       "title": "Design System",
       "copy": "A Styled Components Design System",
-      "image": "../images/gallery/page-transitions.jpg"
+      "image": "../images/gallery/page-transitions.jpg",
+      "githubLink": "#"
     },
     {
       "title": "Page Transitions",
       "copy": "Component-based for easy usage.",
-      "image": "../images/gallery/page-transitions.jpg"
+      "image": "../images/gallery/page-transitions.jpg",
+      "githubLink": "#"
     },
     {
       "title": "Page Transitions",
       "copy": "Component-based for easy usage.",
-      "image": "../images/gallery/page-transitions.jpg"
+      "image": "../images/gallery/page-transitions.jpg",
+      "githubLink": "#"
     }
   ]
 }

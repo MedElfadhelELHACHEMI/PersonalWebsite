@@ -30,6 +30,7 @@ export const query = graphql`
       projectList {
         title
         copy
+        githubLink
         image {
           childImageSharp {
             fluid(maxHeight: 500, quality: 90) {
