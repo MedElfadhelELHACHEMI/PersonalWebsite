@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from './createContext';
 
@@ -6,10 +6,10 @@ import { Provider } from './createContext';
 // The provider, which holds the page-wide store and its actions.
 // Feel free to abstract actions and state away from this file.
 const AppProvider = props => {
-  const [darkMode, setDarkMode] = useState(
-    // LocalStorage.getItem('darkMode') === 'true'
-    false
-  );
+  // const [darkMode, setDarkMode] = useState(
+  //   // LocalStorage.getItem('darkMode') === 'true'
+  //   false
+  // );
   const [open, setOpen] = useState(false);
   const showModal = () => setOpen(true);
   const hideModal = () => setOpen(false);
@@ -17,9 +17,7 @@ const AppProvider = props => {
   //   setDarkMode(LocalStorage.getItem('darkMode') === 'true');
   // }, [LocalStorage.getItem('darkMode')]);
   return (
-    <Provider value={{ darkMode, open, showModal, hideModal }}>
-      {props.children}
-    </Provider>
+    <Provider value={{ open, showModal, hideModal }}>{props.children}</Provider>
   );
 };
 

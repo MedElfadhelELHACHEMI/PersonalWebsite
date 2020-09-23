@@ -1,7 +1,8 @@
 {
   "title": "Home",
+  "ContentTitle": "Hi! I'm Mo and i'm a Front end engineer",
   "content": "intro.md",
-  "backgroundImage": "../images/background2.png",
+  "backgroundImage": "../images/background3.png",
   "backgroundImageDark": "../images/background-Dark.png",
   "gallery": [{
     "title": "React Context",

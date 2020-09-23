@@ -3,9 +3,9 @@ import MEDIA from 'helpers/mediaTemplates';
 
 export const Title = styled.span`
   display: block;
-  font-size: 2rem;
-  font-weight: 500;
-  margin: 2rem 2rem 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0px;
 `;
 
 export const Copy = styled.p`

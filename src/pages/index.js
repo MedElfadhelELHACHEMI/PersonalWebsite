@@ -28,7 +28,10 @@ const IndexContainer = styled.section`
 const Avatar = styled.div`
   flex-basis: 47.5%;
   //margin-right: 4rem;
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+  background: #cccccc;
+  box-shadow: 20px 20px 60px #adadad, -20px -20px 60px #ebebeb;
+  overflow: hidden;
   ${MEDIA.TABLET`
     margin: 0;
     margin-bottom : 4rem;
@@ -65,6 +68,9 @@ const Index = ({ data }) => (
         />
       </Avatar>
       <Text>
+        <Title as="h1" size="title">
+          {data.homeJson.ContentTitle}
+        </Title>
         <Title as="p" size="main">
           {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
         </Title>
@@ -83,6 +89,7 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
+      ContentTitle
       content {
         childMarkdownRemark {
           html

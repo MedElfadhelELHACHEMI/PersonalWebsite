@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Container } from './nav.css';
-import DarkToggle from 'components/dark-toggle/DarkToggle';
+// import DarkToggle from 'components/dark-toggle/DarkToggle';
 
 const Nav = () => (
   <Container>
