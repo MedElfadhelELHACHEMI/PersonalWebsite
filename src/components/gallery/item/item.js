@@ -62,7 +62,7 @@ const InfoContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 1rem 1rem;
+  padding: 1rem 0rem 1rem 1rem;
   `};
 `;
 const StyledButton = styled.a`
@@ -115,10 +115,19 @@ const IconContainer = styled.div`
 `;
 const ButtonText = styled.p`
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 2.7rem;
   font-weight: 600;
   line-height: 21px;
   text-align: center;
+  ${MEDIA.DESKTOP`
+      font-size: 1.7rem;
+  `};
+  ${MEDIA.TABLET`
+      font-size: 1.7rem;
+  `};
+  ${MEDIA.PHONE`
+     font-size: 1.7rem;
+  `};
 `;
 const TextContainer = styled.div`
   width: 100%;

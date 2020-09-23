@@ -48,10 +48,18 @@ const Text = styled.div`
   flex-basis: 47.5%;
   ${MEDIA.DESKTOP`
     flex-basis: 36%;
-    margin-top: 28%
+    margin-top: 0%
     p{
     margin-bottom: 0px;
     }
+  `};
+  ${MEDIA.TABLET`
+    flex-basis: 36%;
+    margin-top: 10%
+  `};
+  ${MEDIA.PHONE`
+    flex-basis: 36%;
+    margin-top: 20%
   `};
 `;
 
