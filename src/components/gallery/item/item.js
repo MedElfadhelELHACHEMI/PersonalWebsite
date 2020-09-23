@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import posed from 'react-pose';
@@ -6,6 +6,7 @@ import { Title, Copy } from './item.css';
 // import Modal from 'components/modal/modal';
 import styled from 'styled-components';
 import MEDIA from 'helpers/mediaTemplates';
+import Scissors from '../scissors';
 
 const AnimatedFigure = posed.figure({
   enter: { opacity: 1, delay: 5000 },
@@ -34,12 +35,11 @@ const ImageContainer = styled.div`
   position: relative;
   margin: 0px;
   box-sizing: border-box;
-
-  background: #ebebeb;
-  box-shadow: 20px 20px 60px #c8c8c8, -20px -20px 60px #ffffff;
+  border-right: 1px dashed #c3c3c3;
   ${MEDIA.TABLET`
   width: 100%;
   height: 72%;
+  border-bottom: 1px dashed #C3C3C3;
   `};
 `;
 const StyledImg = styled(Img)`
@@ -62,31 +62,80 @@ const InfoContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   `};
 `;
 const StyledButton = styled.a`
   width: 100%;
   height: 28%;
   color: #c3c3c3;
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  background: linear-gradient(145deg, #d4d4d4, #fbfbfb);
-  box-shadow: 20px 20px 60px #c8c8c8, -20px -20px 60px #ffffff;
+  text-decoration: none;
+  ${MEDIA.TABLET`
+      height:100%;
+      width:28%;
+  `};
+  &::before {
+    content: '';
+    border-bottom: 1px dashed #c3c3c3;
+    position: absolute;
+    background: transparent;
+    height: 1px;
+    width: calc(100% + 2rem);
+    top: 0;
+    box-shadow: 20px 20px 60px #c8c8c8, -20px -20px 60px #ffffff;
+    ${MEDIA.TABLET`
+      border-bottom: 0px;
+      border-right: 1px dashed #c3c3c3;
+      height: calc(100% + 2rem);
+      width:1px;
+      left:0;
+      top:-1rem;
+  `};
+  }
 `;
-
+const IconContainer = styled.div`
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  box-sizing: border-box;
+  height: 16px;
+  width: 20px;
+  ${MEDIA.TABLET`
+      transform: rotateZ(90deg);
+      bottom: -7px;
+      left:-8px;
+      top: unset;
+      right: unset;
+  `};
+`;
+const ButtonText = styled.p`
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+`;
+const TextContainer = styled.div`
+  width: 100%;
+  height: 72%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  ${MEDIA.TABLET`
+    width: 72%;
+    height: 100%;
+    padding-left: 1rem;
+  `};
+`;
 const Item = ({ title, copy, image, githubLink }) => {
-  const [openModal, setOpenModal] = useState(false);
   return (
-    <StyledFigure
-      style={{ opacity: 0 }}
-      onClick={() => {
-        setOpenModal(!openModal);
-      }}
-    >
+    <StyledFigure style={{ opacity: 0 }}>
       <Container>
         <ImageContainer>
           <StyledImg
@@ -95,10 +144,13 @@ const Item = ({ title, copy, image, githubLink }) => {
           />
         </ImageContainer>
         <InfoContainer>
-          <Title as="h1" size="title">
-            {title}
-          </Title>
-          <Copy>{copy}</Copy>
+          <TextContainer>
+            <Title as="h1" size="title">
+              {title}
+            </Title>
+            <Copy>{copy}</Copy>
+          </TextContainer>
+
           <StyledButton
             /* eslint-disable-next-line no-console */
             onClick={() => console.log(githubLink)}
@@ -106,7 +158,10 @@ const Item = ({ title, copy, image, githubLink }) => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Open Github Repo
+            <IconContainer>
+              <Scissors color="#c3c3c3" height="16px" />
+            </IconContainer>
+            <ButtonText>Open Github Repo</ButtonText>
           </StyledButton>
         </InfoContainer>
       </Container>

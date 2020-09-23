@@ -48,6 +48,7 @@ const Text = styled.div`
   flex-basis: 47.5%;
   ${MEDIA.DESKTOP`
     flex-basis: 36%;
+    margin-top: 28%
     p{
     margin-bottom: 0px;
     }
