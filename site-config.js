@@ -2,15 +2,14 @@ const path = require('path');
 
 module.exports = {
   siteTitle: 'Mo',
-  siteTitleShort: 'GatsbyU',
-  siteDescription: 'An opinionated starter for Gatsby.',
-  siteUrl: 'https://gu.fabianschultz.com',
-  themeColor: '#000',
-  backgroundColor: '#fff',
+  siteTitleShort: 'Mo',
+  siteDescription: "Mohamed Hachemi's personal website",
+  siteUrl: 'https://mohamed-fadhel.co/',
+  themeColor: '#ccc',
+  backgroundColor: '#ebebeb',
   pathPrefix: null,
   logo: path.resolve(__dirname, 'src/images/icon.png'),
   social: {
-    twitter: 'gatsbyjs',
-    fbAppId: '966242223397117',
+    twitter: 'MohamedElfadhel',
   },
 };

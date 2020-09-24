@@ -18,24 +18,6 @@
       "copy": "Visualize Audio Input",
       "image": "../images/gallery/intersection-observer.jpg",
       "githubLink": "#"
-    },
-    {
-      "title": "Design System",
-      "copy": "A Styled Components Design System",
-      "image": "../images/gallery/page-transitions.jpg",
-      "githubLink": "#"
-    },
-    {
-      "title": "Page Transitions",
-      "copy": "Component-based for easy usage.",
-      "image": "../images/gallery/page-transitions.jpg",
-      "githubLink": "#"
-    },
-    {
-      "title": "Page Transitions",
-      "copy": "Component-based for easy usage.",
-      "image": "../images/gallery/page-transitions.jpg",
-      "githubLink": "#"
     }
   ]
 }
