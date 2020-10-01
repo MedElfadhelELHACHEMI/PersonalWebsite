@@ -10,9 +10,6 @@ const Nav = () => (
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/projects">Projects</Link>
-      </li>
-      <li>
         <a href="https://github.com/MedElfadhelELHACHEMI">GitHub</a>
       </li>
       {/*<li>*/}

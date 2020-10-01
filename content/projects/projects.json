@@ -2,22 +2,18 @@
   "title": "Projects",
   "content": "projects.md",
   "projectList": [{
-    "title": "React OpenTok Whiteboard",
-    "copy": "React shared whiteboard that works with Opentok",
-    "image": "../images/gallery/intersection-observer.jpg",
-    "githubLink": "https://github.com/MedElfadhelELHACHEMI/opentok-react-whiteboard"
+    "title": "Phoenix UI-Kit",
+    "copy": "Reusable components for A project we worked on. ",
+    "link": "https://5f76124422a5a60022a94c61-syfgncnemr.chromatic.com",
+    "image": "../images/gallery/Phoenix-ui-kit.png",
+    "githubLink": "https://github.com/YNY-Learning/Phoenix-UI-Kit"
   },
     {
-      "title": "Cam Pot",
-      "copy": "A Three JS game",
-      "image": "../images/gallery/AZERTY2.jpg",
-      "githubLink": "#"
-    },
-    {
-      "title": "Audio Visualizer",
-      "copy": "Visualize Audio Input",
-      "image": "../images/gallery/intersection-observer.jpg",
-      "githubLink": "#"
+      "title": "Opentok Whiteboard",
+      "copy": "A whiteBoard Component for the ReactJs version of TokBox",
+      "link": "https://opentok-whiteboard.netlify.app/",
+      "image": "../images/gallery/whiteboard222.png",
+      "githubLink": "https://github.com/MedElfadhelELHACHEMI/opentok-react-whiteboard"
     }
   ]
 }

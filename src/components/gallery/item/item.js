@@ -143,7 +143,13 @@ const TextContainer = styled.div`
     padding-left: 1rem;
   `};
 `;
-const Item = ({ title, copy, image, githubLink }) => {
+const Link = styled.a`
+  text-decoration: none;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+`;
+const Item = ({ title, copy, image, githubLink, link }) => {
   return (
     <StyledFigure style={{ opacity: 0 }}>
       <Container>
@@ -158,7 +164,15 @@ const Item = ({ title, copy, image, githubLink }) => {
             <Title as="h1" size="title">
               {title}
             </Title>
-            <Copy>{copy}</Copy>
+            <Copy>
+              {copy}
+              <br/>
+              {!!link && (
+                <Link href={link} target="_blank">
+                  Demo
+                </Link>
+              )}
+            </Copy>
           </TextContainer>
 
           <StyledButton
@@ -184,6 +198,7 @@ Item.propTypes = {
   copy: PropTypes.string,
   image: PropTypes.object.isRequired,
   githubLink: PropTypes.string,
+  link: PropTypes.string,
 };
 
 export default Item;

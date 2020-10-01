@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Layout from 'components/layout';
 import Title from 'components/title';
+import Gallery from 'components/gallery/gallery';
 import { graphql } from 'gatsby';
 import MEDIA from 'helpers/mediaTemplates';
 
@@ -85,6 +86,7 @@ const Index = ({ data }) => (
         </Title>
       </Text>
     </IndexContainer>
+    <Gallery items={data.projectsJson.projectList} />
   </Layout>
 );
 
@@ -108,6 +110,27 @@ export const query = graphql`
       gallery {
         title
         copy
+        image {
+          childImageSharp {
+            fluid(maxHeight: 500, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    }
+    projectsJson {
+      title
+      content {
+        childMarkdownRemark {
+          html
+        }
+      }
+      projectList {
+        title
+        copy
+        githubLink
+        link
         image {
           childImageSharp {
             fluid(maxHeight: 500, quality: 90) {

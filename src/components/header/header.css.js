@@ -10,6 +10,8 @@ export const Container = styled.header`
   min-height: 64px;
   max-height: 64px;
   box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
   ${MEDIA.TABLET`
   padding: 0 3.5rem;
   `};

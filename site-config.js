@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteTitle: 'Mo',
   siteTitleShort: 'Mo',
-  siteDescription: "Mohamed Hachemi's personal website",
+  siteDescription: 'Mohamed Hachemi\'s personal website',
   siteUrl: 'https://mohamed-fadhel.co/',
   themeColor: '#ccc',
   backgroundColor: '#ebebeb',
