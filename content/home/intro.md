@@ -1,3 +1,3 @@
 I mainly work with ReactJS.
-I Design and implement everything from the architecture, animations and UI kit.
-I'm currently working at Yes'n'You in Paris where i'm the front end engineer .
+I handle everything from the app architecture,the user experience,SEO and Animations.
+I currently work at Yes'n'You, an Ed-Tech company, in paris.
