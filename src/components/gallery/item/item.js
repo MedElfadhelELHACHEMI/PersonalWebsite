@@ -166,7 +166,7 @@ const Item = ({ title, copy, image, githubLink, link }) => {
             </Title>
             <Copy>
               {copy}
-              <br/>
+              <br />
               {!!link && (
                 <Link href={link} target="_blank">
                   Demo

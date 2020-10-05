@@ -13,8 +13,10 @@ export const Title = styled.span`
 export const Copy = styled.p`
   color: #757575;
   margin: 0;
+  font-size: 2.5rem;
+  font-weight: 400;
 
   ${MEDIA.TABLET`
-      
+      font-size: 2rem;
   `};
 `;

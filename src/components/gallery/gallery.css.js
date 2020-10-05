@@ -11,7 +11,7 @@ export const Container = styled.div`
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   ${MEDIA.TABLET`
-    padding: 0 4%;
+    padding: 0 1%;
 
   `};
 `;
@@ -24,5 +24,5 @@ export const ItemContainer = styled.section`
   overflow: hidden;
   padding: 0rem;
   align-self: center;
-  ${MEDIA.TABLET`height: 72%;`};
+  ${MEDIA.TABLET`height: 90%;`};
 `;
